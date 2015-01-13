@@ -1,7 +1,7 @@
 
 _get_all_nuxeo_packages()
 {
-	local cmd=$1
+  local cmd=$1
   local cache_base=$HOME/.nuxeo_bash_completion_cache
   local packages
   if [ ! -f ${cache_base}.$$ ];then
@@ -15,7 +15,7 @@ _get_all_nuxeo_packages()
 
 _nuxeoctl() 
 {
-		local cmd="${1}"
+    local cmd="${1}"
     local cur prev opts base
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
@@ -24,10 +24,10 @@ _nuxeoctl()
     opts="--help --accept -d --debug -dc --gui -h --help --json --nodeps -q --quiet --relax -s --snapshot --xml" 
     cmds="help gui start startbg stop restart restartbg status console wizard configure pack showconf mp-list mp-listall mp-init mp-update mp-add mp-install mp-uninstall mp-request mp-remove mp-reset mp-purge mp-hostfix mp-upgrade mp-show"
 
-		case "${prev}" in
-			mp-uninstall)
-	      local running=$($cmd --json mp-list | jq .commands.command.packages.package[].id) 
-	    	COMPREPLY=( $(compgen -W "${running}" -- ${cur}) )
+    case "${prev}" in
+      mp-uninstall)
+        local running=$($cmd --json mp-list | jq .commands.command.packages.package[].id) 
+        COMPREPLY=( $(compgen -W "${running}" -- ${cur}) )
         return 0
         ;;
       --gui)
