@@ -1,0 +1,1 @@
+This project contains a bash completion for nuxeoctl
