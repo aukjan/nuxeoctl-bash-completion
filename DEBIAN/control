@@ -1,0 +1,11 @@
+Package: nuxeoctl-bash-completion
+Priority: optional
+Section: shells
+Installed-Size: 
+Maintainer: Aukjan <aukjan@vanbelkum.nl>
+Architecture: all
+Version: 0.0.1
+Depends: bash-completion (>=1.0), jq (>=1.1)
+Description: nuxeoctl completions for bash
+Homepage: https://github.com/aukjan/nuxeoctl-bash-completion
+Bugs: https://github.com/aukjan/nuxeoctl-bash-completion/issues
