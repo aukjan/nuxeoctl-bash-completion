@@ -1,6 +1,6 @@
 # Bash Completion for nuxeoctl 
 
-This project contains a bash completion scrifor nuxeoctl
+This project contains a bash completion script for `nuxeoctl`.
 
 # How does this work? 
 
