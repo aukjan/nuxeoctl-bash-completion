@@ -2,6 +2,14 @@
 
 This project contains a bash completion scrifor nuxeoctl
 
+# How does this work? 
+
+This completion script will resolve all package id's for you, depending on the given command. 
+
+* For expanding the `mp-install` command, it will download all available packages from the Nuxeo Marketplace. For each shell in which the command is run, it will create a file cache to speed up subsequent calls. The initial call is slow, but the rest uses the cache (stored in `${HOME}/.nuxeo_bash_completion_cache.${PID}`). 
+
+* For `mp-uninstall` it will query the currently downloaded/installed packages, using `mp-list`
+
 # Dependencies
 
 * jq - http://stedolan.github.io/jq/download/ 
@@ -38,7 +46,3 @@ Now tap the completions, and install the forumla
 brew tap aukjan/completions
 brew install nuxeoctl-completion
 ```
-
-## Make
-
-
